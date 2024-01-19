@@ -7,6 +7,7 @@ import { EmployeesModule } from './employees/employees.module';
 
 import { ThrottlerModule, ThrottlerGuard } from '@nestjs/throttler';
 import { APP_GUARD } from '@nestjs/core';
+import { LoggingModule } from './logging/logging.module';
 
 @Module({
   imports: [
@@ -15,10 +16,17 @@ import { APP_GUARD } from '@nestjs/core';
     EmployeesModule,
     ThrottlerModule.forRoot([
       {
+        name: 'short',
+        ttl: 1000,
+        limit: 5,
+      },
+      {
+        name: 'long',
         ttl: 60000,
-        limit: 10,
+        limit: 100,
       },
     ]),
+    LoggingModule,
   ],
   controllers: [AppController],
   providers: [
