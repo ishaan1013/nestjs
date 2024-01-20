@@ -33,7 +33,7 @@ export class AllExceptionsFilter extends BaseExceptionFilter {
       response: exception,
     };
 
-    if (exception instanceof HttpException) {
+    if (exception instanceof PrismaClientValidationError) {
       responseObject.statusCode = 442;
       responseObject.response = exception.message.replaceAll(/\n/g, '');
     } else if (exception instanceof HttpException) {
