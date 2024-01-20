@@ -7,7 +7,7 @@
 
 ## Project Description
 
-A basic Nest.js REST API following the MVC pattern, integrated with Prisma + PostgreSQL with Neon. It implements CRUD, rate limiting, logging, and excepton filtering.
+A Nest.js REST API following the MVC pattern, integrated with Prisma + PostgreSQL with Neon. Implements CRUD, rate limiting, logging, & exception filtering. Configured & deployed on Docker and Kubernetes. 
 
 ## Installation + Running
 
