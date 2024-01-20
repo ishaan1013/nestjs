@@ -19,6 +19,8 @@ $ npm install
 # development
 $ npm run start
 
+# Note: Create a database on Neon, and add in the required secrets to: /.env
+
 # watch mode
 $ npm run start:dev
 
